@@ -1,0 +1,55 @@
+<!doctype html>
+<html lang="en"><head><meta charset="UTF-8"/><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1,user-scalable=no"/><meta name="theme-color" content="#f7f4eb"/><title>HiveQuest — The Nectar Adventure</title></head>
+<body>
+<div id="app">
+<header class="topbar">
+  <button class="brand" id="brand-home" aria-label="HiveQuest home"><span class="brand-mark">🐝</span><span><b><i>Hive</i>Mart</b><small>HIVEQUEST · THE NECTAR ADVENTURE</small></span></button>
+  <div class="top-actions"><span class="wallet">🍯 <b id="wallet">000</b></span><span class="player-chip">🐝 Meadow Explorer</span></div>
+</header>
+<main>
+<section id="home-screen" class="page active">
+  <div class="hero">
+    <div class="hero-copy"><p class="eyebrow">A HIVE MART EXCLUSIVE ADVENTURE</p><h1>HIVE<span>QUEST</span></h1><h2>The Nectar Adventure</h2><p>Every flower has a little magic. Help Bibi bring the gardens back to life!</p>
+      <div class="hero-actions"><button class="primary" id="start-adventure">▶ PLAY NOW</button><button class="secondary" data-page="worlds-screen">WORLD MAP ↗</button></div>
+      <div class="hero-foot">✦ 100 LEVELS &nbsp; ✦ 20 WORLDS &nbsp; ✦ ENDLESS BUZZ</div>
+    </div>
+    <div class="hero-art"><div class="sun"></div><div class="cloud c1"></div><div class="cloud c2"></div><div class="hill hill-back"></div><div class="hill hill-front"></div><div class="pixel-flower f1">🌷</div><div class="pixel-flower f2">🌼</div><div class="pixel-flower f3">🌻</div><div class="hero-bee">🐝</div><div class="honey-pot">🍯</div></div>
+  </div>
+  <div class="home-cards">
+    <button class="feature-card" data-page="worlds-screen"><span>🗺️</span><b>Adventure Map</b><small>Explore 20 magical worlds</small></button>
+    <button class="feature-card" data-page="leaderboard-screen"><span>🏆</span><b>Honey Hall</b><small>Climb the global rankings</small></button>
+    <button class="feature-card" data-page="profile-screen"><span>🎒</span><b>Bee Collection</b><small>Your journey and rewards</small></button>
+  </div>
+</section>
+
+<section id="worlds-screen" class="page">
+  <div class="section-heading"><div><p class="eyebrow">YOUR ADVENTURE STARTS HERE</p><h1>World map</h1><p>Complete five levels to discover the next world.</p></div><button class="secondary" data-page="home-screen">← HOME</button></div>
+  <div class="world-grid" id="world-grid"></div>
+</section>
+
+<section id="game-screen" class="page">
+  <div class="game-heading"><button class="secondary" id="back-to-map">← MAP</button><div><b id="world-label">WORLD 01 · SUNNY MEADOW</b><small id="level-label">LEVEL 01 / 100</small></div><button class="secondary" id="pause">Ⅱ PAUSE</button></div>
+  <div class="game-wrap"><div id="game"></div><div class="hud"><div class="hearts" id="hearts">♥ ♥ ♥</div><div class="nectar">🌼 <b id="nectar">0/5</b></div><div class="score">⭐ <b id="score">0</b></div></div><div class="toast" id="toast"></div>
+    <div class="start-screen" id="start-screen"><div class="start-card"><div class="bee-emoji">🐝</div><p class="eyebrow">LEVEL BRIEFING</p><h2 id="screen-title">The First Bloom</h2><p id="screen-copy">Collect every nectar bloom and reach the hive.</p><button id="play">START LEVEL</button><p class="controls-copy">Move: A/D or ←/→ · Jump: W / ↑ / Space</p></div></div>
+  </div>
+  <div class="mobile-controls"><div><button data-key="left">◀</button><button data-key="right">▶</button></div><button data-key="jump" class="jump">JUMP ⬆</button></div>
+  <div class="quest-strip"><b id="quest-title">The First Bloom</b><span id="quest-copy">Collect every bloom and reach the hive.</span><div class="progress"><span id="progress-bar"></span></div><small id="progress-copy">0 of 5 flowers collected</small></div>
+</section>
+
+<section id="leaderboard-screen" class="page">
+  <div class="section-heading"><div><p class="eyebrow">THE HONEY HALL</p><h1>Leaderboard</h1><p>Who will become the brightest bee in the hive?</p></div><button class="secondary" data-page="home-screen">← HOME</button></div>
+  <div class="leaderboard-panel"><div class="leaderboard-banner">🏆 <span>THE TOP TEN BUZZERS</span> 🏆</div><ol id="leader-list"><li class="muted">Firebase setup required for global scores.</li></ol><div id="player-status" class="muted">Guest play · local progress</div></div>
+</section>
+
+<section id="profile-screen" class="page">
+  <div class="section-heading"><div><p class="eyebrow">YOUR HIVE IDENTITY</p><h1>Bee collection</h1><p>Every little flight counts.</p></div><button class="secondary" data-page="home-screen">← HOME</button></div>
+  <div class="profile-panel"><div class="profile-bee">🐝</div><h2>Meadow Explorer</h2><p>HiveMart adventurer</p><div class="stats"><div><b id="profile-score">0</b><small>TOTAL POINTS</small></div><div><b id="profile-level">1</b><small>LEVEL REACHED</small></div><div><b id="profile-worlds">1</b><small>WORLDS OPEN</small></div></div><p class="credit">A game designed for <b>HiveMart</b></p><p class="credit">Game concept & development: <b>Developer credit to be added</b></p></div>
+</section>
+
+<section id="settings-screen" class="page">
+  <div class="section-heading"><div><p class="eyebrow">MAKE YOURSELF AT HOME</p><h1>Settings</h1></div><button class="secondary" data-page="home-screen">← HOME</button></div>
+  <div class="settings-panel"><div><b>Sound effects</b><span>Coming in the next build</span><button class="toggle" disabled>OFF</button></div><div><b>Music</b><span>Coming in the next build</span><button class="toggle" disabled>OFF</button></div><div><b>Controls</b><span>Keyboard and touch controls enabled</span><button class="toggle on" disabled>ON</button></div></div>
+</section>
+<footer><span>HIVEMART</span> · SHOP SMART. FEEL SMART. <span>HIVEQUEST</span></footer>
+</main></div>
+<script type="module" src="/src/main.js"></script></body></html>
